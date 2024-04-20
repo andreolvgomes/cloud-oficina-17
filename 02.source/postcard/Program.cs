@@ -37,5 +37,5 @@ app.MapControllerRoute(
 
 app.Run();
 
-//docker build -t oficina17-grupo2 .
-//docker run -d -p 8080:80 --name oficina17-grupo2 oficina17-grupo2
+//docker build -t oficina17-git2 .
+//docker run -d -p 8080:80 --name oficina17-git2 oficina17-git2

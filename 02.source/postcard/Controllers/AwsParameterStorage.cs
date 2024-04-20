@@ -1,10 +1,19 @@
-﻿namespace postcard.Controllers
+﻿using Amazon.SimpleSystemsManagement.Model;
+using Amazon.SimpleSystemsManagement;
+
+namespace postcard.Controllers
 {
     public class AwsParameterStorage
     {
         public static async Task<string> getconnectionstring(IConfiguration configuration)
         {
-            // TODO; mudanças aqui
+            var client = new AmazonSimpleSystemsManagementClient(Amazon.RegionEndpoint.USEast1);
+            var request = new GetParameterRequest()
+            {
+                Name = "SQLDatabaseConnection"
+            };
+            var value = await client.GetParameterAsync(request);
+            return value.Parameter.Value;
 #if DEBUG
             var connectionString = configuration.GetValue<string>("ConnectionStrings:SQLDatabaseConnection");
             return connectionString;
@@ -21,7 +30,13 @@
 
         public static async Task<string> BucketName(IConfiguration configuration)
         {
-            // TODO; mudanças aqui
+            var client = new AmazonSimpleSystemsManagementClient(Amazon.RegionEndpoint.USEast1);
+            var request = new GetParameterRequest()
+            {
+                Name = "BucketName"
+            };
+            var value = await client.GetParameterAsync(request);
+            return value.Parameter.Value;
 #if DEBUG
             return configuration.GetValue<string>("StorageS3:BucketName");
 #else
@@ -37,7 +52,13 @@
 
         public static async Task<string> AwsAccessKey(IConfiguration configuration)
         {
-            // TODO; mudanças aqui
+            var client = new AmazonSimpleSystemsManagementClient(Amazon.RegionEndpoint.USEast1);
+            var request = new GetParameterRequest()
+            {
+                Name = "AccessKey"
+            };
+            var value = await client.GetParameterAsync(request);
+            return value.Parameter.Value;
 #if DEBUG
             return configuration.GetValue<string>("StorageS3:AwsAccessKey");
 #else
@@ -53,7 +74,13 @@
 
         public static async Task<string> AwsSecretAccessKey(IConfiguration configuration)
         {
-            // TODO; mudanças aqui
+            var client = new AmazonSimpleSystemsManagementClient(Amazon.RegionEndpoint.USEast1);
+            var request = new GetParameterRequest()
+            {
+                Name = "SecretAccessKey"
+            };
+            var value = await client.GetParameterAsync(request);
+            return value.Parameter.Value;
 #if DEBUG
             return configuration.GetValue<string>("StorageS3:AwsSecretAccessKey");
 #else
