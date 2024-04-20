@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[3.7.103.50, )"
             },
+            "AWSSDK.SimpleSystemsManagement": {
+              "target": "Package",
+              "version": "[3.7.303.26, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.1, )"

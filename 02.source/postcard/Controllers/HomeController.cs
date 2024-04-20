@@ -24,7 +24,7 @@ public class HomeController : Controller
         var model = new Home();
         var modelcapa = new List<Capas>();
         var hostname = Dns.GetHostEntry(Dns.GetHostName());
-
+        
         foreach (var ip in hostname.AddressList)
         {
             if (ip.AddressFamily == AddressFamily.InterNetwork)
@@ -32,7 +32,7 @@ public class HomeController : Controller
                 model.hostip = ip.ToString();
             }
         }
-        
+        model.hostip += "\n" + Guid.NewGuid();
         modelcapa = await new SQLUtility().getcapas("SELECT Id, uf, estado, musica, youtube, imagem FROM capas", _configuration);
 
         model.listcapas = modelcapa;

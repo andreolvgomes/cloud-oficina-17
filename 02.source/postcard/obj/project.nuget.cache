@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OA1LbuyAPtGV+IvTl1hvktA1cC7nWOF/SRbQS6CpG6uYUumM+fXiHPl00Fo3nqRIkTP24jHQ/BqMiYGCiQZ5FQ==",
+  "dgSpecHash": "0Z3fDUtSbxpSwZj3KhZ0N0EYY0P/+kqbHftBZNLHeCfY3bYrSQyTfCj/3J7m6VSrSkQWYnA6y9eqJcGA6kIgYw==",
   "success": true,
   "projectFilePath": "C:\\Projects\\cloud-oficina-17\\02.source\\postcard\\postcard.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\André\\.nuget\\packages\\awssdk.core\\3.7.106.20\\awssdk.core.3.7.106.20.nupkg.sha512",
+    "C:\\Users\\André\\.nuget\\packages\\awssdk.core\\3.7.303.17\\awssdk.core.3.7.303.17.nupkg.sha512",
     "C:\\Users\\André\\.nuget\\packages\\awssdk.s3\\3.7.103.50\\awssdk.s3.3.7.103.50.nupkg.sha512",
+    "C:\\Users\\André\\.nuget\\packages\\awssdk.simplesystemsmanagement\\3.7.303.26\\awssdk.simplesystemsmanagement.3.7.303.26.nupkg.sha512",
     "C:\\Users\\André\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\André\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\André\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
